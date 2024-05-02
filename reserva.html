@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!--Fazer versão totalmente em inglês-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pousada Atlântida</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <!--Fontes-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <div class="titulo">
+            <h1>Pousada Atlântida</h1>
+        </div>
+        <div class="nav-options">
+            <p>Início</p>
+            <p>Sobre nós</p>
+            <p>Acomodações</p>
+            <p>Espaços de lazer</p>
+            <p>Gastronomia</p>
+            <p>Localização</p>
+            <p>Contato</p>
+        </div>
+        <a href="reserva.html">
+            <div class="reserva">
+                <p>reserva</p>
+            </div>
+        </a>
+    </header>
+
+    <main>
+
+        <div class="retorno">
+            <a href="inicio.html">
+                <div>
+                    <img src="assets/voltar.svg" alt="">
+                    <p>Voltar à página inicial</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="sua-conta">
+            <div class="img-back-conta">
+                <img src="images/back-conta.jpg" alt="">
+            </div>
+            <div class="center-conta-container">
+                <div class="conta-container">
+                    <div class="titulo-conta">
+                        <h4>
+                            sua reserva
+                        </h4>
+                    </div>
+                    <!--div class="usuario">
+                        <label for="">Usuário</label>
+                        <br>
+                        <input type="text" placeholder="Nome de usuário">
+                    </div-->
+                    <form>
+                        <div class="cpf">
+                            <label for="">CPF</label>
+                            <br>
+                            <input name="CPF" placeholder="xxx.xxx.xxx-xx" required>
+                            <p class="error error-hidden">CPF inválido</p>
+                        </div>
+                        <div class="credencial">
+                            <label for="">Credencial da reserva</label>
+                            <br>
+                            <input type="number" name="Password" placeholder="6 dígitos" maxlength="6" required>
+                            <p class="error error-hidden">Credencial não coincide</p>
+                        </div>
+                        <div class="solicitar-cred">
+                            <button onclick="solicitar()">Solicitar credencial <img src="assets/whatsapp.svg" alt=""></button>
+                            <div id="aba-solicitar">
+                                <p>Envie-nos uma mensagem no Whatsapp solicitando sua credencial da reserva</p>
+                                <span>Estamos redirecionando você...</span>
+                            </div>
+                        </div>
+                        <div class="entrar">
+                            <button onclick="reserva()">Conectar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="acesso-reserva">
+            <div class="acesso-content">
+                <div class="titulo-acesso">
+                    <h6>Bem-vindo ao painel do hóspede</h6>
+                    <br>
+                    <p>Aqui você pode administrar as informações da sua reserva, 
+                        orçamentos, disponibilidade, check-in e check-out, contatar 
+                        a pousada, e muito mais
+                    </p>
+                </div>
+                <div class="dois-centros">
+                    <div class="botoes-lateral">
+                        <button onclick="minhaReserva()">Minha estadia <img src="assets/minha.svg" alt=""></button>
+                        <button onclick="cafeManha()">Café da manhã <img src="assets/cafemanha.svg" alt=""></button>
+                        <button onclick="lazer()">Lazer <img src="assets/lazer.svg" alt=""></button>
+                        <button>Orçamentos <img src="assets/orcamentos.svg" alt=""></button>
+                        <button>Contatar <img src="assets/contatar.svg" alt=""></button>
+                    </div>
+                    <div class="centro">
+                        <div class="minha-reserva"> 
+                            <div class="dois-circles">
+                                <div class="circle">
+                                    <div class="cima">
+                                        <img src="assets/usuario.svg" alt="">
+                                        <p>Olá, Eduardo</p>
+                                    </div>
+                                    <div class="baixo">
+                                        <p>Você está em:</p> 
+                                        <span>Chalé Signature</span>
+                                    </div>
+                                </div>
+                                <div class="circle">
+                                    <p class="circle-p-class">Sempre que precisar, estaremos aqui para atendê-lo. 
+                                        Contate-nos rapidamente no botão do painel e digite a sua solicitação. 
+                                        Retornaremos o quanto antes possível. Tenha uma ótima estadia!
+                                    </p>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="checks">
+                                <div class="check-input">
+                                    <p>Seu check-in está previsto para:</p>
+                                    <br>
+                                    <span class="in"><img src="assets/calendar.svg" alt=""> 00/00/0000</span>
+                                </div>
+                                <div class="check-input">
+                                    <p>Seu check-out está previsto para:</p>
+                                    <br>
+                                    <span class="out"><img src="assets/calendar.svg" alt=""> 00/00/0000</span>
+                                </div>
+                                <div class="alterar-datas">
+                                    <button onclick="alterarDatas()">Quero mudar as datas</button>
+                                    <div class="alterar-js">
+                                        <p>Novas datas</p>
+                                        <label for="">Entrada</label>
+                                        <input type="date">
+                                        <label for="">Saída</label>
+                                        <input type="date">
+                                        <span>*se já estiver hospedado, altere somente 
+                                            a data de saída.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="cafe-manha">
+                            <div class="h4-cafe">
+                                <h4>Seu café da manhã <span>Incluso</span></h4>
+                                <p>Veja o cardápio abaixo</p>
+                            </div>
+                            <br>
+                            <div class="cardapio-cafe-3">
+                                <div class="card-cafe">
+                                    <div class="img-cafe">
+                                        <img src="images/sanduiche.jpg" alt="">
+                                    </div>
+                                    <div class="nome-cafe">
+                                        <p>Sanduíche fresco</p>
+                                    </div>
+                                    <div class="desc-cafe">
+                                        <p>pão natural, queijo mussarela, apresuntado, 
+                                            maionese, alface, tomate e picles.
+                                        </p>
+                                    </div>
+                                    <div class="btn-cafe">
+                                        <button>Adicionar <img src="assets/adicionar.svg" alt=""></button>
+                                    </div>
+                                </div>
+                                <div class="card-cafe">
+                                    <div class="img-cafe">
+                                        <img src="images/vinhos.jpg" alt="">
+                                    </div>
+                                    <div class="nome-cafe">
+                                        <p>Vinhos da casa</p>
+                                    </div>
+                                    <div class="desc-cafe">
+                                        <p>pão natural, queijo mussarela, apresuntado, 
+                                            maionese, alface, tomate e picles.
+                                        </p>
+                                    </div>
+                                    <div class="btn-cafe">
+                                        <button>Adicionar <img src="assets/adicionar.svg" alt=""></button>
+                                    </div>
+                                </div>
+                                <div class="card-cafe">
+                                    <div class="img-cafe">
+                                        <img src="images/taca.jpg" alt="">
+                                    </div>
+                                    <div class="nome-cafe">
+                                        <p>Taça de milkshake</p>
+                                    </div>
+                                    <div class="desc-cafe">
+                                        <p>pão natural, queijo mussarela, apresuntado, 
+                                            maionese, alface, tomate e picles.
+                                        </p>
+                                    </div>
+                                    <div class="btn-cafe">
+                                        <button>Adicionar <img src="assets/adicionar.svg" alt=""></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cardapio-cafe-3">
+                                <div class="card-cafe">
+                                    <div class="img-cafe">
+                                        <img src="images/drinks.jpg" alt="">
+                                    </div>
+                                    <div class="nome-cafe">
+                                        <p>Drinks</p>
+                                    </div>
+                                    <div class="desc-cafe">
+                                        <p>Sabores: </p>
+                                        <span class="limao">Limão</span>
+                                        <span class="morango">Morango</span>
+                                        <span class="laranja">Laranja</span>
+                                    </div>
+                                    <div class="btn-cafe">
+                                        <button>Adicionar <img src="assets/adicionar.svg" alt=""></button>
+                                    </div>
+                                </div>
+                                <div class="card-cafe">
+                                    <div class="img-cafe">
+                                        <img src="images/cereais.jpg" alt="">
+                                    </div>
+                                    <div class="nome-cafe">
+                                        <p>Cereais</p>
+                                    </div>
+                                    <div class="desc-cafe">
+                                        <p>pão natural, queijo mussarela, apresuntado, 
+                                            maionese, alface, tomate e picles.
+                                        </p>
+                                    </div>
+                                    <div class="btn-cafe">
+                                        <button>Adicionar <img src="assets/adicionar.svg" alt=""></button>
+                                    </div>
+                                </div>
+                                <div class="card-cafe">
+                                    <div class="img-cafe">
+                                        <img src="images/cafe.jpg" alt="">
+                                    </div>
+                                    <div class="nome-cafe">
+                                        <p>Café expresso</p>
+                                    </div>
+                                    <div class="desc-cafe">
+                                        <p>pão natural, queijo mussarela, apresuntado, 
+                                            maionese, alface, tomate e picles.
+                                        </p>
+                                    </div>
+                                    <div class="btn-cafe">
+                                        <button>Adicionar <img src="assets/adicionar.svg" alt=""></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cardapio-cafe-3">
+                                <div class="card-cafe">
+                                    <div class="img-cafe">
+                                        <img src="images/burger.jpg" alt="">
+                                    </div>
+                                    <div class="nome-cafe">
+                                        <p>Xis burger</p>
+                                    </div>
+                                    <div class="desc-cafe">
+                                        <p>pão natural, queijo mussarela, apresuntado, 
+                                            maionese, alface, tomate e picles.
+                                        </p>
+                                    </div>
+                                    <div class="btn-cafe">
+                                        <button>Adicionar <img src="assets/adicionar.svg" alt=""></button>
+                                    </div>
+                                </div>
+                                <div class="card-cafe">
+                                    <div class="img-cafe">
+                                        <img src="images/soda.jpg" alt="">
+                                    </div>
+                                    <div class="nome-cafe">
+                                        <p>Refresco de guaraná</p>
+                                    </div>
+                                    <div class="desc-cafe">
+                                        <p>pão natural, queijo mussarela, apresuntado, 
+                                            maionese, alface, tomate e picles.
+                                        </p>
+                                    </div>
+                                    <div class="btn-cafe">
+                                        <button>Adicionar <img src="assets/adicionar.svg" alt=""></button>
+                                    </div>
+                                </div>
+                                <div class="card-cafe">
+                                    <div class="img-cafe">
+                                        <img src="images/bolo.jpg" alt="">
+                                    </div>
+                                    <div class="nome-cafe">
+                                        <p>Bolo de chocolate</p>
+                                    </div>
+                                    <div class="desc-cafe">
+                                        <p>pão natural, queijo mussarela, apresuntado, 
+                                            maionese, alface, tomate e picles.
+                                        </p>
+                                    </div>
+                                    <div class="btn-cafe">
+                                        <button>Adicionar <img src="assets/adicionar.svg" alt=""></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lazer">
+                            <div class="titulo-lazer">
+                                <p>Opções de lazer na pousada</p>
+                            </div>
+                            <div class="container-lazer">
+                                <div class="img-laz">
+                                    <div class="gradiente-sobre-lazer"></div>
+                                    <img src="images/acampamento-painel.jpg" alt="">
+                                </div>
+                                <div class="laz-absolute">
+                                    <div class="titulo-laz">
+                                        <h1>Acampamento</h1>
+                                    </div>
+                                    <div class="btn-laz">
+                                        <button>Agendar agora</button>
+                                        <div class="agendar-lazer-hidden">
+                                            <div class="data-agendar">
+                                                <label for="">Entrada: </label>
+                                                <input type="date" placeholder="Data">
+                                            </div>
+                                            <div class="data-agendar">
+                                                <label for="">Horário: </label>
+                                                <input type="time" placeholder="00:00">
+                                            </div>
+                                            <div class="data-agendar">
+                                                <label for="">Sua excursão <span>para acampar </span>será 
+                                                comunicado à secretaria da Pousada Atlântida.</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-lazer">
+                                <div class="img-laz">
+                                    <div class="gradiente-sobre-lazer"></div>
+                                    <img src="images/passeio.jpg" alt="">
+                                </div>
+                                <div class="laz-absolute">
+                                    <div class="titulo-laz">
+                                        <h1>Passeio a cavalo</h1>
+                                    </div>
+                                    <div class="btn-laz">
+                                        <button>Agendar agora</button>
+                                        <div class="agendar-lazer-hidden">
+                                            <div class="data-agendar">
+                                                <label for="">Entrada: </label>
+                                                <input type="date" placeholder="Data">
+                                            </div>
+                                            <div class="data-agendar">
+                                                <label for="">Horário: </label>
+                                                <input type="time" placeholder="00:00">
+                                            </div>
+                                            <div class="data-agendar">
+                                                <label for="">Seu passeio <span>a cavalo </span>será 
+                                                comunicado à secretaria da Pousada Atlântida.</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-lazer">
+                                <div class="img-laz">
+                                    <div class="gradiente-sobre-lazer"></div>
+                                    <img src="images/santuario.jpg" alt="">
+                                </div>
+                                <div class="laz-absolute">
+                                    <div class="titulo-laz">
+                                        <h1>Santuário de Jesus</h1>
+                                    </div>
+                                    <div class="btn-laz">
+                                        <button>Agendar agora</button>
+                                        <div class="agendar-lazer-hidden">
+                                            <div class="data-agendar">
+                                                <label for="">Entrada: </label>
+                                                <input type="date" placeholder="Data">
+                                            </div>
+                                            <div class="data-agendar">
+                                                <label for="">Horário: </label>
+                                                <input type="time" placeholder="00:00">
+                                            </div>
+                                            <div class="data-agendar">
+                                                <label for="">Sua caminhada <span>ao santuário </span>será 
+                                                comunicado à secretaria da Pousada Atlântida.</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="orcamentos">
+
+                        </div>
+                        <div class="contatar">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+</body>
+
+<script src="reserva.js"></script>
+<script src="solicitar.js"></script>
+
+</html>

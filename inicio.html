@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!--Fazer versão totalmente em inglês-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pousada Atlântida</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <!--Fontes-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
+</head>
+<body>
+
+    <div class="cookies">
+        <div class="texto-cookies">
+            <p>O nosso site usa cookies, incluindo cookies opcionais 
+                para oferecer a você a melhor experiência no nosso site 
+                e para mostrar os anúncios relevantes com base em seu 
+                uso de nosso site. Você pode gerenciar suas preferências 
+                ou aceitar todos os cookies. Para saber mais, consulte 
+                nossa <span>Política de Privacidade</span> e <span>Política de Cookies.</span>
+            </p>
+        </div>
+        <div class="botoes-cookies">
+            <button id="aceitarCookies" onclick="hideCookies()">Aceitar</button>
+            <button id="negarCookies" onclick="negarCookies()">Gerenciar</button>
+        </div>
+    </div>
+    <div class="cookies-gerenciados">
+        <!--Opções de gerenciamento de cookies-->
+        <div class="space-max-cookies-gerenciados">
+            <div class="gerence-container">
+                <input type="checkbox" checked>
+                <label for="">Essenciais</label>
+            </div>
+            <div class="gerence-container">
+                <input type="checkbox">
+                <label for="">Desempenho</label>
+            </div>
+            <div class="gerence-container">
+                <input type="checkbox">
+                <label for="">Dados do usuário</label>
+            </div>
+            <div class="gerence-container">
+                <input type="checkbox">
+                <label for="">Publicidade</label>
+            </div>
+            <button id="aceitarCookies" onclick="hideAcceptCookies()">Aceitar</button>
+            <button id="negarCookies" onclick="hideAcceptCookies()">Negar</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <div class="titulo">
+            <h1>Pousada Atlântida</h1>
+        </div>
+        <div class="nav-options">
+            <p>Início</p>
+            <p>Sobre nós</p>
+            <p>Acomodações</p>
+            <p>Espaços de lazer</p>
+            <p>Gastronomia</p>
+            <p>Localização</p>
+            <p>Contato</p>
+        </div>
+        <a href="reserva.html">
+            <div class="reserva">
+                <p>reserva</p>
+            </div>
+        </a>
+    </header>
+
+    <main>
+
+        <div class="video-background">
+            <div class="video">
+                <video src="videos/background.mp4" type="video/mp4" loop muted id = "autoplay"></video>
+            </div>
+            <div class="texto-inicio">
+                <h1>Pousada Atlântida</h1>
+                <p>Onde seus sonhos se tornam realidade</p>
+                <span>Venha conhecer a nossa maravilhosa pousada 
+                    no interior das florestas de Atlântida, com os 
+                    melhores preços, acomodações e espaços de lazer. 
+                    Entre em contato e solicite sua reserva.
+                </span>
+                <br>
+                <a href="reserva.html">
+                    <button>
+                        Quero reservar
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <div class="procurando">
+            <div class="img-back">
+                <div class="gradiente-sobre-img"></div>
+                <img src="images/background.jpg" alt="">
+            </div>
+            <section class="titulo-opcoes">
+                <h1>Por o que você está procurando?</h1>
+                <p>conheça as nossas estadias</p>
+            </section>
+            <section class="div-opcoes">
+                <div class="chales">
+                    <div class="img-estadia">
+                        <img src="images/chales.jpg" alt="">
+                    </div>
+                    <div class="titulo-estadia">
+                        <h2>Chalés</h2>
+                    </div>
+                    <div class="descricao-estadia">
+                        <p>Nossos chalés são feitos para você desfrutar 
+                            da melhor sensação à dois, com vista especial 
+                            para a natureza e montanhas.
+                        </p>
+                    </div>
+                    <div class="botao-estadia">
+                        <a href="#chales-opcoes">
+                            <button>Ver mais</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="acampamento">
+                    <div class="img-estadia">
+                        <img src="images/acampamento.jpg" alt="">
+                    </div>
+                    <div class="titulo-estadia">
+                        <h2>Acampamento</h2>
+                    </div>
+                    <div class="descricao-estadia">
+                        <p>Reserve a experiência de acampar na altitude 
+                            das montanhas de Atlâtida, seja com amigos, 
+                            familiares ou cônjuge.
+                        </p>
+                    </div>
+                    <div class="botao-estadia">
+                        <a href=" ">
+                            <button>Ver mais</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="residencial">
+                    <div class="img-estadia">
+                        <img src="images/residencial.jpg" alt="">
+                    </div>
+                    <div class="titulo-estadia">
+                        <h2>Residencial</h2>
+                    </div>
+                    <div class="descricao-estadia">
+                        <p>Está viajando em família? Reserve agora as 
+                            residências temáticas de Atlântida, com disponibilidade 
+                            para até 12 pessoas.
+                        </p>
+                    </div>
+                    <div class="botao-estadia">
+                        <a href=" ">
+                            <button>Ver mais</button>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="mensagem">
+                <div class="mes-p">
+                    <p>Envie-nos uma mensagem para verificar orçamentos, 
+                        disponibilidade ou outras informações
+                    </p>
+                </div>
+                <div class="mes-input">
+                    <input type="text" placeholder="Digite aqui...">
+                </div>
+                <div class="mes-img">
+                    <img src="assets/enviar.svg" alt="Enviar">
+                </div>
+            </section>
+        </div>
+
+        <section class="titulo-chales">
+            <h1>Nossos melhores chalés</h1>
+        </section>
+
+        <div id="chales-opcoes">
+            <div class="chale-card">
+                <div class="img-chale">
+                    <img src="images/magnifica.jpg" alt="">
+                </div>
+                <div class="nome-chale">
+                    <p>Chalé Magnífica</p>
+                </div>
+                <div class="btn-chale">
+                    <button>detalhes</button>
+                </div>
+            </div>
+            <div class="chale-card">
+                <div class="img-chale">
+                    <img src="images/signature.jpg" alt="">
+                </div>
+                <div class="nome-chale">
+                    <p>Chalé Signature</p>
+                </div>
+                <div class="btn-chale">
+                    <button>detalhes</button>
+                </div>
+            </div>
+            <div class="chale-card">
+                <div class="img-chale">
+                    <img src="images/monumental.jpg" alt="">
+                </div>
+                <div class="nome-chale">
+                    <p>Chalé Monumental</p>
+                </div>
+                <div class="btn-chale">
+                    <button>detalhes</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="section-background">
+            <div class="img-back">
+                <img src="images/background-forest-green.jpg" alt="">
+            </div>
+            <div class="texto-boasvindas">
+                <h4>Depare-se com as maravilhas da selva de Atlântida</h4>
+                <span class="experience">uma experiência única</span>
+                <p>Em Atlântida, oferecemos a melhor estadia que você irá encontrar 
+                    na região dos alpes. Por isso, pensamos em algo feito pra você. 
+                    Somente aqui, é possível encontrar benefícios, lazer e gastronomia 
+                    à la carte da <span class="italic">vera regione italiana</span> e 
+                    adentrar as cachoeiras paradisíacas do <span class="bold">Mundo de 
+                    Órion.</span>
+                </p>
+                <span class="color">Cozinha italiana</span>
+                <span class="color">Café da manhã incluso</span>
+                <span class="color">Wi-Fi disponível</span>
+                <div class="div-oquefazer">
+                    <div class="border">
+                        <div class="b-titulo">
+                            <p>Treeking</p>
+                        </div>
+                        <div class="b-simbolo">
+                            <img src="assets/trekking.svg" alt="">
+                        </div>
+                        <div class="b-desc">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Aenean ut erat ex. Quisque vestibulum faucibus lorem, a commodo elit euismod sed.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border">
+                        <div class="b-titulo">
+                            <p>Piscinas naturais</p>
+                        </div>
+                        <div class="b-simbolo">
+                            <img src="assets/piscinas.svg" alt="">
+                        </div>
+                        <div class="b-desc">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Aenean ut erat ex. Quisque vestibulum faucibus lorem, a commodo elit euismod sed.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border">
+                        <div class="b-titulo">
+                            <p>Balanço infinito</p>
+                        </div>
+                        <div class="b-simbolo">
+                            <img src="assets/balanço.svg" alt="">
+                        </div>
+                        <div class="b-desc">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Aenean ut erat ex. Quisque vestibulum faucibus lorem, a commodo elit euismod sed.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border">
+                        <div class="b-titulo">
+                            <p>Passeios a cavalo</p>
+                        </div>
+                        <div class="b-simbolo">
+                            <img src="assets/cavalo.svg" alt="">
+                        </div>
+                        <div class="b-desc">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                               Aenean ut erat ex. Quisque vestibulum faucibus lorem, a commodo elit euismod sed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="titulo-chales">
+            <h1>Onde você quer acampar?</h1>
+            <br>
+            <p>Todos os passeios possuem um guia que levará os hóspedes até o local de acampamento</p>
+        </section>
+
+        <div id="chales-opcoes">
+            <div class="chale-card">
+                <div class="img-chale">
+                    <img src="images/pedras.jpg" alt="">
+                </div>
+                <div class="nome-chale">
+                    <p>Vista das Pedras</p>
+                </div>
+                <div class="btn-chale">
+                    <button>detalhes</button>
+                </div>
+            </div>
+            <div class="chale-card">
+                <div class="img-chale">
+                    <img src="images/montanha.jpg" alt="">
+                </div>
+                <div class="nome-chale">
+                    <p>Alto da Montanha</p>
+                </div>
+                <div class="btn-chale">
+                    <button>detalhes</button>
+                </div>
+            </div>
+            <div class="chale-card">
+                <div class="img-chale">
+                    <img src="images/lago.jpg" alt="">
+                </div>
+                <div class="nome-chale">
+                    <p>Beira do Lago</p>
+                </div>
+                <div class="btn-chale">
+                    <button>detalhes</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+    <script src="autoplay.js"></script>
+    <script src="cookies.js"></script>
+
+</html>
